@@ -92,7 +92,6 @@ x=open("Documents\\Cursos de Coursera\\Python\\d.txt","r")
 a=x.readlines() #Con el comando "readlines" se lee los txt
 #Con "os.chdir()" cambias de directorio
 
-
 def ocurrencias(string):
     a=str(string)
     b=len(a)
@@ -106,7 +105,7 @@ def ocurrencias(string):
             f=f+1
     return e-f
 
-ocurrencias("11000110101")
+
 
 
 
