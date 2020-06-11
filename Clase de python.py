@@ -75,15 +75,6 @@ print(b.strip("h"))#Remueve la letras del inicio o final
 print(b.replace("chocolate","vainilla"))# reemplaza un texto por otro
 
 
-s = input("Ingresa una palabra: ")
-resultado = ""
-i = 0
-x=5
-while i<len(s):
-  resultado= resultado + s[len(s)-i-1]
-  i=i+1
-print(resultado)
-
 
 #ABRIR un Archivo con open, el 2do parametro indicar si read con "r" o write
 #con "w"., por default es read "r". No olvidar el ".txt"
@@ -92,25 +83,27 @@ x=open("Documents\\Cursos de Coursera\\Python\\d.txt","r")
 a=x.readlines() #Con el comando "readlines" se lee los txt
 #Con "os.chdir()" cambias de directorio
 
-def ocurrencias(string):
-    a=str(string)
-    b=len(a)
-    e=0
-    f=0
-    for i in range(b):
-        d=a[i]
-        if d=="1":
-            e=e+1
-        elif d=="0":
-            f=f+1
-    return e-f
 
-
-
-
-
-
-
+#LISTAS WITH PYTHON
+lista=["r","studio","python","2020","zZ"]# print(lista[2:]) ira del 2 al final
+for i in lista:
+    print("lista",i) #Imprime cada una de la lista
+añadir=["SPSS","STATA"]#Para añadir a la lista se crea otra variable
+lista=lista+añadir    #Luego se le añade a la lista original
+lista.append("Eviews")#Otra forma mas facil de añadir a la variable original
+lista.extend(["Excel","word"])#Añade mas de 1 elemento a la variable original
+lista.insert(3,"math")#Añade en la posicion 3 el elemento "math"
+lista.pop()#Elimina el ultimo elemento de la lista y imprimi el eliminado
+lista.remove("zZ")#Elimina el elemento que esta dentro de los ()
+x=lista.remove(2020)
+"linux" in lista#Busca si el elemento que esta en "" se encuentra dentro de la
+# variable. Como resultado te entrega un buleano. 
+lista.index("python")#Nos entrega en Numero donde se encuentra el elemento
+ingreso=input("Ingrese una frase separado por comas ""(,)")
+convertidor=ingreso.split(",")#Usa el string y lo separa por "," con split
+lista.sort()#Ordena la lista de menor a mayor(a-z si fuera string)
+x=[[100,"pan"],[50,"vino"],[70,"queso"]]
+x.sort()#Va ordenar de acuerdo a su 1er elemento de cada lista
 
 
 
